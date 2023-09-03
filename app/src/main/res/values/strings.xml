@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">collegeApp</string>
+    <string name="text">BSc IT &amp; CS</string>
+    <string name="text2">Complete 1-tap solution</string>
+    <string name="ebooks">E-Books</string>
+    <string name="chat_bot">Chat Bot</string>
+    <string name="practicals">Practicals</string>
+    <string name="notes">Notice</string>
+    <string name="attendance">Attendance</string>
+    <string name="task">Daily Task</string>
+
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+
+    <string name="explore">EXPLORE</string>
+    <string name="themes">Themes</string>
+    <string name="about_faculty">About Faculty</string>
+    <string name="Logout">Logout</string>
+    <string name="helps">HELP &amp; SUPPORT</string>
+    <string name="events">Events</string>
+    <string name="suggestion">Suggestion</string>
+    <string name="header_image">header image</string>
+    <string name="todo">card_image</string>
+    <string name="help_center">Help Center</string>
+    <string name="report">Report a Complaint</string>
+    <string name="more">More</string>
+
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="Notification">Notification</string>
+    <string name="game">Quiz Game</string>
+    <string name="download">Download</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
