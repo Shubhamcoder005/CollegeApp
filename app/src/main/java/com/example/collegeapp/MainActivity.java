@@ -1,7 +1,9 @@
 package com.example.collegeapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -46,45 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
         toggle.syncState();
 
-        navigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                int id = item.getItemId();
-
-                if (id==R.id.about){
-
-                    loaddrawernavfragment(new about_faculty(),false);
-
-                } else if (id==R.id.theme) {
-
-                     loaddrawernavfragment(new themes(),false);
-
-                } else if (id==R.id.event) {
-
-                    loaddrawernavfragment(new events(),false);
-
-                } else if (id==R.id.suggestion) {
-
-                      loaddrawernavfragment(new suggestion(),false);
-
-                } else if (id==R.id.help_center) {
-
-                    loaddrawernavfragment(new help_center(),false);
-
-                } else if (id==R.id.report) {
-
-                    loaddrawernavfragment(new report(),false);
-
-                } else{
-
-                    loaddrawernavfragment(new more(),false);
-                }
-
-                drawerLayout.closeDrawer(GravityCompat.START);
-                return true;
-            }
-        });
 
 
         bottom_home.setOnNavigationItemSelectedListener(new OnNavigationItemSelectedListener() {
@@ -120,6 +83,45 @@ public class MainActivity extends AppCompatActivity {
         });
 
         bottom_home.setSelectedItemId(R.id.home);
+
+
+        navigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                int  num = item.getItemId();
+
+                if (num==R.id.about){
+                    Toast.makeText(MainActivity.this, "About", Toast.LENGTH_SHORT).show();
+                } else if (num==R.id.theme) {
+                    Toast.makeText(MainActivity.this, "Theme", Toast.LENGTH_SHORT).show();
+
+                } else if (num==R.id.event) {
+                    Toast.makeText(MainActivity.this, "Event`", Toast.LENGTH_SHORT).show();
+
+
+                } else if (num==R.id.suggestion) {
+
+
+
+                } else if (num==R.id.help_center) {
+
+
+
+                } else if (num==R.id.report) {
+
+
+
+                } else{
+
+
+                }
+
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
+
     }
 
     @Override
@@ -133,14 +135,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void loaddrawernavfragment(Fragment fragment,boolean flag){
-        FragmentManager fm=getSupportFragmentManager();
-        FragmentTransaction ft=fm.beginTransaction();
+    private void loaddrawernavfragment(Fragment fragment,boolean flag){
+        FragmentManager mm=getSupportFragmentManager();
+        FragmentTransaction tt=mm.beginTransaction();
         if(flag) {
-            ft.add(R.id.drawer_box, fragment);
+            tt.add(R.id.drawerlayout, fragment);
         }else {
-            ft.replace(R.id.drawer_box,fragment);
-            ft.commit();
+            tt.replace(R.id.drawerlayout,fragment);
+            tt.commit();
         }
     }
 
