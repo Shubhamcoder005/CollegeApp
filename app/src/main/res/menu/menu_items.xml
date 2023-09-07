@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/safety_tips"
+        android:title="@string/safety"
+        android:icon="@drawable/shield" />
+
+    <item
+        android:id="@+id/terms"
+        android:title="@string/terms"
+        android:icon="@drawable/agreement" />
+
+    <item
+        android:id="@+id/privacy"
+        android:title="@string/privacy"
+        android:icon="@drawable/security_shield"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="@string/about"
+        android:icon="@drawable/information"/>
+
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout"
+        android:icon="@drawable/baseline_logout_24"/>
+</menu>

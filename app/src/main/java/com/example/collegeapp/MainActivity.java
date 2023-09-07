@@ -2,10 +2,8 @@ package com.example.collegeapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.View;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -16,16 +14,17 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
-    NavigationView navigation;
+    NavigationView navigation,menuNavigation;
     Toolbar toolbar;
 
-    BottomNavigationView bottom_home;
+    BottomNavigationView bottomNavigationView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +32,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //bottom navigation
-        bottom_home=findViewById(R.id.bottom_home);
+        bottomNavigationView=findViewById(R.id.bottomNavigationView);
 
         //toolbar open and close
         drawerLayout=findViewById(R.id.drawerlayout);
         navigation=findViewById(R.id.navigation);
+        menuNavigation=findViewById(R.id.menuNavigation);
         toolbar=findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
@@ -49,80 +49,88 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();
 
 
+        navigation.setNavigationItemSelectedListener(menuItem -> {
 
-        bottom_home.setOnNavigationItemSelectedListener(new OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            int id=menuItem.getItemId();
+            if (id==R.id.about_faculty){
 
-                int id = item.getItemId();
+                loadbuttonfragment(new about_faclity(),false);
+                bottomNavigationView.setVisibility(View.GONE);
 
-                if (id==R.id.home){
+            } else if (id==R.id.theme) {
 
-                      loadbuttonfragment(new Home(),false);
+                loadbuttonfragment(new theme(),false);
+                bottomNavigationView.setVisibility(View.GONE);
 
-                } else if (id==R.id.download) {
+            } else if (id==R.id.event) {
 
-                   loadbuttonfragment(new profile(),false);
+                loadbuttonfragment(new event(),false);
+                bottomNavigationView.setVisibility(View.GONE);
 
-                } else if (id==R.id.notification) {
+            } else if (id==R.id.suggestion) {
 
-                    loadbuttonfragment(new Quiz_game(),false);
+                loadbuttonfragment(new suggestion(),false);
+                bottomNavigationView.setVisibility(View.GONE);
 
-                } else if (id==R.id.game) {
+            }else if(id==R.id.help_center){
 
-                      loadbuttonfragment(new Quiz_game(),false);
+                loadbuttonfragment(new help_center(),false);
+                bottomNavigationView.setVisibility(View.GONE);
 
-                }else {
+            }else if(id==R.id.report){
 
-                      loadbuttonfragment(new profile(),false);
+                loadbuttonfragment(new report(),false);
+                bottomNavigationView.setVisibility(View.GONE);
 
-                }
+            }else if(id==R.id.more){
 
-                return true;
+                Intent next=new Intent(MainActivity.this, more.class);
+                startActivity(next);
+
             }
+            return true;
         });
 
-        bottom_home.setSelectedItemId(R.id.home);
 
 
-        navigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
 
-                int  num = item.getItemId();
+            int id = item.getItemId();
 
-                if (num==R.id.about){
-                    Toast.makeText(MainActivity.this, "About", Toast.LENGTH_SHORT).show();
-                } else if (num==R.id.theme) {
-                    Toast.makeText(MainActivity.this, "Theme", Toast.LENGTH_SHORT).show();
+            if (id==R.id.home){
 
-                } else if (num==R.id.event) {
-                    Toast.makeText(MainActivity.this, "Event`", Toast.LENGTH_SHORT).show();
+                  loadbuttonfragment(new Home(),false);
 
+            } else if (id==R.id.download) {
 
-                } else if (num==R.id.suggestion) {
+               loadbuttonfragment(new profile(),false);
 
+            } else if (id==R.id.notification) {
 
+                loadbuttonfragment(new Quiz_game(),false);
 
-                } else if (num==R.id.help_center) {
+            } else if (id==R.id.game) {
 
+                  loadbuttonfragment(new Quiz_game(),false);
 
+            }else {
 
-                } else if (num==R.id.report) {
+                  loadbuttonfragment(new profile(),false);
 
-
-
-                } else{
-
-
-                }
-
-                drawerLayout.closeDrawer(GravityCompat.START);
-                return true;
             }
+
+            return true;
         });
+
+        bottomNavigationView.setSelectedItemId(R.id.home);
+
+
 
     }
+
+
+
+    //------------------------------------------------------------------------------------//
 
     @Override
     public void onBackPressed(){
@@ -135,19 +143,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void loaddrawernavfragment(Fragment fragment,boolean flag){
-        FragmentManager mm=getSupportFragmentManager();
-        FragmentTransaction tt=mm.beginTransaction();
-        if(flag) {
-            tt.add(R.id.drawerlayout, fragment);
-        }else {
-            tt.replace(R.id.drawerlayout,fragment);
-            tt.commit();
-        }
-    }
-
-
-    //bottom navigation
+    //    bottom navigation
     public void loadbuttonfragment(Fragment fragment,boolean flag){
         FragmentManager fm=getSupportFragmentManager();
         FragmentTransaction ft=fm.beginTransaction();
@@ -157,5 +153,10 @@ public class MainActivity extends AppCompatActivity {
             ft.replace(R.id.constraint,fragment);
             ft.commit();
         }
+
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
     }
+
 }

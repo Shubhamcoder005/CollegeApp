@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link about_faclity#newInstance} factory method to
+ * Use the {@link theme#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class about_faclity extends Fragment {
+public class theme extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class about_faclity extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public about_faclity() {
+    public theme() {
         // Required empty public constructor
     }
 
@@ -34,18 +34,16 @@ public class about_faclity extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment about_faclity.
+     * @return A new instance of fragment theme.
      */
     // TODO: Rename and change types and number of parameters
-    public static about_faclity newInstance(String param1, String param2) {
-        about_faclity fragment = new about_faclity();
+    public static theme newInstance(String param1, String param2) {
+        theme fragment = new theme();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
-
-
     }
 
     @Override
@@ -61,6 +59,6 @@ public class about_faclity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about_faclity, container, false);
+        return inflater.inflate(R.layout.fragment_theme, container, false);
     }
 }
