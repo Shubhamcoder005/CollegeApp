@@ -64,6 +64,7 @@
     <string name="username">Username</string>
     <string name="already_have_account">Already have account</string>
     <string name="or_sign_up_with">or sign up with</string>
+    <string name="invalid_email_or_password">Invalid Email or Password</string>
 
 
 </resources>

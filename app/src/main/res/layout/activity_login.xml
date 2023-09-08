@@ -58,6 +58,21 @@
             android:textAppearance="@style/SansFamilyText" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/invalidLoginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/open_sans"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/invalid_email_or_password"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableLeft="@drawable/alert_icon"/>
+
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/createAccountText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,7 +111,7 @@
                 android:layout_height="@dimen/_40sdp"
                 android:drawableLeft="@drawable/google_icon"
                 android:text="@string/google"
-                android:layout_margin="@dimen/_5sdp"
+                android:layout_margin="@dimen/_3sdp"
                 app:strokeColor="@color/hint_color"
                 app:strokeWidth="@dimen/_1sdp"
                 android:textColor="@color/hint_color"
@@ -104,4 +119,15 @@
                 android:textAppearance="@style/SansFamilyText" />
 
     </LinearLayout>
+
+    <com.razzaghimahdi78.dotsloading.circle.LoadingCircleFady
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginLoading"
+        android:visibility="gone"
+        app:dots_color="@color/red"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

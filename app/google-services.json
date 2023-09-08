@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "914498353959-qdscko8unn25degrkumfrlbmflu6tch8.apps.googleusercontent.com",
+          "client_id": "914498353959-nrh2pj3cav0as8otsjl4rg6hs7nri1e4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.collegeapp",
+            "certificate_hash": "6ef1348e8e1768863f1ccbe87df04319254b9958"
+          }
+        },
+        {
+          "client_id": "914498353959-vv4r5rsbvl9muvon028oofgqc7o6a21t.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

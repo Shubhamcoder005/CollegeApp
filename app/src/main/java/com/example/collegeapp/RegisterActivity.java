@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,25 +20,31 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.razzaghimahdi78.dotsloading.circle.LoadingCircleFady;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Locale;
 import java.util.Set;
 import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity {
 
     EditText signUpUserName, signUpEmail, signUpPassword;
-    TextView alreadyAccount;
+    TextView alreadyAccount, invalidText;
     Button registerBtn, googleRegisterBtn;
     String username, email, password;
     FirebaseAuth mAuth;     //firebase auth object which can used to check authentication
     GoogleSignInClient googleClient;
     GoogleSignInOptions gso;
+    LoadingCircleFady loadingBar;
 
     private final int REQ_ONE_TAP = 101;
 
@@ -51,8 +59,10 @@ public class RegisterActivity extends AppCompatActivity {
         signUpEmail = findViewById(R.id.signUpEmail);
         signUpPassword = findViewById(R.id.signUpPassword);
         alreadyAccount = findViewById(R.id.alreadyAccountText);
+        invalidText = findViewById(R.id.invalidRegisterText);
         registerBtn = findViewById(R.id.registerBtn);
         googleRegisterBtn = findViewById(R.id.googleRegisterBtn);
+        loadingBar = findViewById(R.id.registerLoading);
 
         //google authentication
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -70,23 +80,40 @@ public class RegisterActivity extends AppCompatActivity {
                 email = signUpEmail.getText().toString();
                 password = signUpPassword.getText().toString();
 
-                if (!username.equals("") || !email.equals("") || !password.equals("")) {
+                //default set the invalid text as hide and show loading
+                invalidText.setVisibility(View.GONE);
+                loadingBar.setVisibility(View.VISIBLE);
 
-                    mAuth.createUserWithEmailAndPassword(email, password)
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-                                        //If user is member then go to mainActivity
-                                        startActivity(new Intent(RegisterActivity.this, MainActivity.class));
-                                        finish();
-                                    } else {
-                                        //If not user then show error message
-                                        Toast.makeText(RegisterActivity.this, "something went wrong", Toast.LENGTH_SHORT).show();
+                if (!username.equals("") && !email.equals("") && !password.equals("")) {
+                    if (isValidPassword(password) && isValidEmail(email)) {
+
+                        mAuth.createUserWithEmailAndPassword(email, password)
+                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if (task.isSuccessful()) {
+                                            //If user is member then go to mainActivity
+                                            loadingBar.setVisibility(View.GONE);
+                                            startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                                            finish();
+                                        }
                                     }
-                                }
-                            });
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        loadingBar.setVisibility(View.GONE);
+                                        Toast.makeText(RegisterActivity.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                    }
+                    else {
+                        //set the invalid text visible and show loading
+                        invalidText.setVisibility(View.VISIBLE);
+                        loadingBar.setVisibility(View.GONE);
+//                        Toast.makeText(RegisterActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                    }
                 } else {
+                    loadingBar.setVisibility(View.GONE);
                     Toast.makeText(RegisterActivity.this, "Enter valid credential", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -130,12 +157,14 @@ public class RegisterActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == REQ_ONE_TAP) {
+            loadingBar.setVisibility(View.VISIBLE);
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
 
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 firebaseAuthWithGoogle(account.getIdToken());
             } catch (Exception e) {
+                loadingBar.setVisibility(View.GONE);
                 Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
             }
         }
@@ -152,6 +181,7 @@ public class RegisterActivity extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             Intent i = new Intent(RegisterActivity.this, MainActivity.class);
                             startActivity(i);
+                            loadingBar.setVisibility(View.GONE);
                             finish();
                         } else {
                             // If sign in fails, display a message to the user.
@@ -159,5 +189,15 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    private boolean isValidPassword(String password) {
+        Pattern pattern = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\\$%^&*+=~]).{8,}");
+        return pattern.matcher(password).matches();
+    }
+
+    private Boolean isValidEmail(String email){
+        //It used default email address validation
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,22 +19,27 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.razzaghimahdi78.dotsloading.circle.LoadingCircleFady;
+
+import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity {
 
-    TextView createAccount;
+    TextView createAccount, invalidText;
     EditText signInEmail, signInPassword;
     Button loginBtn, googleLoginBtn;
     FirebaseAuth mAuth;
     GoogleSignInClient googleClient;
     GoogleSignInOptions gso;
     String email, password;
+    LoadingCircleFady loadingBar;
     private final int REQ_ONE_TAP = 100;
 
     @Override
@@ -44,10 +50,12 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         createAccount = findViewById(R.id.createAccountText);
+        invalidText = findViewById(R.id.invalidLoginText);
         signInEmail = findViewById(R.id.signInEmail);
         signInPassword = findViewById(R.id.signInPassword);
         loginBtn = findViewById(R.id.loginBtn);
         googleLoginBtn = findViewById(R.id.googleLoginBtn);
+        loadingBar = findViewById(R.id.loginLoading);
 
         //google authentication
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -71,23 +79,41 @@ public class LoginActivity extends AppCompatActivity {
                 email = signInEmail.getText().toString();
                 password = signInPassword.getText().toString();
 
-                if (email.equals("") || password.equals("")) {
+                //default set the invalid text as hide
+                invalidText.setVisibility(View.GONE);
+                loadingBar.setVisibility(View.VISIBLE);
+
+                if (email.equals("") && password.equals("")) {
                     Toast.makeText(LoginActivity.this, "Enter valid credential", Toast.LENGTH_SHORT).show();
                 } else {
-                    mAuth.signInWithEmailAndPassword(email, password)
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(isValidPassword(password) && isValidEmail(email)) {
+                        mAuth.signInWithEmailAndPassword(email, password)
+                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
 
-                                    if (task.isSuccessful()) {
-
-                                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                                        finish();
-                                    } else {
-                                        Toast.makeText(LoginActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                                        if (task.isSuccessful()) {
+                                            loadingBar.setVisibility(View.GONE);
+                                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                            finish();
+                                        } else {
+                                            loadingBar.setVisibility(View.GONE);
+                                            Toast.makeText(LoginActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                                        }
                                     }
-                                }
-                            });
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        loadingBar.setVisibility(View.GONE);
+                                        Toast.makeText(LoginActivity.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                    }
+                    else{
+                        //set the invalid text as an error
+                        invalidText.setVisibility(View.VISIBLE);
+                        loadingBar.setVisibility(View.GONE);
+                    }
                 }
             }
         });
@@ -123,12 +149,14 @@ public class LoginActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == REQ_ONE_TAP) {
+            loadingBar.setVisibility(View.VISIBLE);
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
 
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 firebaseAuthWithGoogle(account.getIdToken());
             } catch (Exception e) {
+                loadingBar.setVisibility(View.GONE);
                 Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
             }
         }
@@ -145,6 +173,7 @@ public class LoginActivity extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             Intent i = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(i);
+                            loadingBar.setVisibility(View.GONE);
                             finish();
                         } else {
                             // If sign in fails, display a message to the user.
@@ -152,5 +181,15 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    private boolean isValidPassword(String password) {
+        Pattern pattern = Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\\$%^&*+=~]).{8,}");
+        return pattern.matcher(password).matches();
+    }
+
+    private Boolean isValidEmail(String email){
+        //It used default email address validation
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }
