@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".more"
-    android:orientation="vertical">
+    tools:context=".logout">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <com.google.android.material.navigation.NavigationView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/menuNavigation"
-        app:menu="@menu/menu_items"/>
+        android:gravity="center"
+        android:textSize="@dimen/_20sdp"
+        android:text="@string/about_faculty"/>
 
-
-    </LinearLayout>
-
-
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

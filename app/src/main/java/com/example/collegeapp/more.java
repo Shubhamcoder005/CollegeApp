@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Objects;
+
 public class more extends AppCompatActivity {
 
     NavigationView menuNavigation;
@@ -14,6 +16,9 @@ public class more extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more);
+
+        getSupportActionBar().setTitle("More");
+
 
         menuNavigation=findViewById(R.id.menuNavigation);
 
@@ -24,6 +29,7 @@ public class more extends AppCompatActivity {
 
                 Intent next=new Intent(more.this, safety_tips.class);
                 startActivity(next);
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
             } else if (id == R.id.terms) {
 

@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
 
+    CardView card_ebooks,card_chat_bot,card_practicals,card_notes,card_attendance,card_daily_task;
+
 
 
     @Override
@@ -40,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
         menuNavigation=findViewById(R.id.menuNavigation);
         toolbar=findViewById(R.id.toolbar);
 
+        card_ebooks=findViewById(R.id.card_ebooks);
+        card_chat_bot=findViewById(R.id.card_chat_bot);
+        card_practicals=findViewById(R.id.card_practicals);
+        card_notes=findViewById(R.id.card_notes);
+        card_attendance=findViewById(R.id.card_attendance);
+        card_daily_task=findViewById(R.id.card_daily_task);
+
         setSupportActionBar(toolbar);
 
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
@@ -54,39 +64,38 @@ public class MainActivity extends AppCompatActivity {
             int id=menuItem.getItemId();
             if (id==R.id.about_faculty){
 
-                loadbuttonfragment(new about_faclity(),false);
-                bottomNavigationView.setVisibility(View.GONE);
+                Intent next=new Intent(MainActivity.this, About_faclity.class);
+                startActivity(next);
 
             } else if (id==R.id.theme) {
 
-                loadbuttonfragment(new theme(),false);
-                bottomNavigationView.setVisibility(View.GONE);
+                Intent next=new Intent(MainActivity.this, Theme.class);
+                startActivity(next);
 
             } else if (id==R.id.event) {
 
-                loadbuttonfragment(new event(),false);
-                bottomNavigationView.setVisibility(View.GONE);
+                Intent next=new Intent(MainActivity.this, Event.class);
+                startActivity(next);
 
             } else if (id==R.id.suggestion) {
 
-                loadbuttonfragment(new suggestion(),false);
-                bottomNavigationView.setVisibility(View.GONE);
+                Intent next=new Intent(MainActivity.this, Suggestion.class);
+                startActivity(next);
 
             }else if(id==R.id.help_center){
 
-                loadbuttonfragment(new help_center(),false);
-                bottomNavigationView.setVisibility(View.GONE);
+                Intent next=new Intent(MainActivity.this, Help_Center.class);
+                startActivity(next);
 
             }else if(id==R.id.report){
 
-                loadbuttonfragment(new report(),false);
-                bottomNavigationView.setVisibility(View.GONE);
+                Intent next=new Intent(MainActivity.this, Report_a_Complaint.class);
+                startActivity(next);
 
             }else if(id==R.id.more){
 
                 Intent next=new Intent(MainActivity.this, more.class);
                 startActivity(next);
-
             }
             return true;
         });
@@ -112,10 +121,12 @@ public class MainActivity extends AppCompatActivity {
             } else if (id==R.id.game) {
 
                   loadbuttonfragment(new Quiz_game(),false);
+                  getSupportActionBar().setTitle("Quiz Game");
 
             }else {
 
                   loadbuttonfragment(new profile(),false);
+                  getSupportActionBar().setTitle("My Profile");
 
             }
 
@@ -123,6 +134,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         bottomNavigationView.setSelectedItemId(R.id.home);
+
+//        card_ebooks.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent next = new Intent(MainActivity.this, BSc_IT_CS.class);
+//                startActivity(next);
+//            }
+//        });
 
 
 

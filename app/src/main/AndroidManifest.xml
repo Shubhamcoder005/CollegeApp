@@ -13,26 +13,68 @@
         android:theme="@style/Theme.CollegeApp"
         tools:targetApi="31">
         <activity
-            android:name=".logout"
+            android:name=".BSc_IT_CS"
             android:exported="false" />
+        <activity
+            android:name=".Report_a_Complaint"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".Help_Center"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".Suggestion"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".Event"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".Theme"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".About_faclity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".logout"
+            android:exported="false"
+            android:parentActivityName=".more"
+            android:theme="@style/action.bar" />
         <activity
             android:name=".about"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".more"
+            android:theme="@style/action.bar" />
         <activity
             android:name=".pravacy_policy"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".more"
+            android:theme="@style/action.bar" />
         <activity
             android:name=".Terms_and_condition"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".more"
+            android:theme="@style/action.bar" />
         <activity
             android:name=".safety_tips"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".more"
+            android:theme="@style/action.bar" />
         <activity
             android:name=".more"
-            android:exported="false" />
-        <activity
-            android:name=".about_faclity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

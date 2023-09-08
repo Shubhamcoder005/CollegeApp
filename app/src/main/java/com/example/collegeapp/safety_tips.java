@@ -10,5 +10,7 @@ public class safety_tips extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_safety_tips);
+
+        getSupportActionBar().setTitle("Safety Tips");
     }
 }

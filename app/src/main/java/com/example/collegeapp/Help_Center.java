@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class about extends AppCompatActivity {
+public class Help_Center extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_help_center);
 
-        getSupportActionBar().setTitle("About");
+        getSupportActionBar().setTitle("Help Center");
     }
 }
