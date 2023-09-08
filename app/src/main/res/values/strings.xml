@@ -54,10 +54,16 @@
     <string name="reference4">Get All Semester 4 Reference</string>
     <string name="reference5">Get All Semester 5 Reference</string>
     <string name="reference6">Get All Semester 6 Reference</string>
-
-
-
-
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="or_sign_in_with">or sign in with</string>
+    <string name="google">Google</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="already_have_account">Already have account</string>
+    <string name="or_sign_up_with">or sign up with</string>
 
 
 </resources>

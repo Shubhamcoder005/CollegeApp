@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/registerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/open_sans"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/register"
+            android:textAlignment="center"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/_20sdp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signUpUsername"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/edittext_background"
+            android:drawableLeft="@drawable/username_icon"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/username"
+            android:padding="@dimen/_8sdp"
+            android:textAppearance="@style/SansFamilyText" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signUpEmail"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edittext_background"
+            android:drawableLeft="@drawable/email_icon"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/email"
+            android:padding="@dimen/_8sdp"
+            android:textAppearance="@style/SansFamilyText" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signUpPassword"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:inputType="textPassword"
+            android:background="@drawable/edittext_background"
+            android:drawableLeft="@drawable/password_icon"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/password"
+            android:padding="@dimen/_8sdp"
+            android:textAppearance="@style/SansFamilyText" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/alreadyAccountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/open_sans"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/already_have_account"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/_10sdp"
+            android:layout_gravity="end"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerBtn"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/open_sans"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/register"
+            android:textSize="@dimen/_15sdp"
+            android:background="@drawable/edittext_background"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/open_sans"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/or_sign_up_with"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/_10sdp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/googleRegisterBtn"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:drawableLeft="@drawable/google_icon"
+                android:text="@string/google"
+                android:layout_margin="@dimen/_5sdp"
+                app:strokeColor="@color/hint_color"
+                app:strokeWidth="@dimen/_1sdp"
+                android:textColor="@color/hint_color"
+                android:backgroundTint="@color/white"
+                android:textAppearance="@style/SansFamilyText" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
