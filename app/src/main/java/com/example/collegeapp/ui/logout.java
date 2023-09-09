@@ -1,4 +1,4 @@
-package com.example.collegeapp;
+package com.example.collegeapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.collegeapp.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class logout extends AppCompatActivity {

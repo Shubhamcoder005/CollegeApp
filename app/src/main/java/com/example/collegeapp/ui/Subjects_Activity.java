@@ -1,8 +1,10 @@
-package com.example.collegeapp;
+package com.example.collegeapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.collegeapp.R;
 
 import java.util.Objects;
 

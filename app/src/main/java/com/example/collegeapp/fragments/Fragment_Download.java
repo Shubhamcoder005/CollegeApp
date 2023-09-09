@@ -1,4 +1,4 @@
-package com.example.collegeapp;
+package com.example.collegeapp.fragments;
 
 import android.os.Bundle;
 
@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.collegeapp.R;
+
 public class Fragment_Download extends Fragment {
 
     public Fragment_Download(){

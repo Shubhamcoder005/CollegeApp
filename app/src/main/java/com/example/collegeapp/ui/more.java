@@ -1,13 +1,14 @@
-package com.example.collegeapp;
+package com.example.collegeapp.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.collegeapp.R;
+import com.example.collegeapp.Terms_and_condition;
+import com.example.collegeapp.safety_tips;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.Objects;
 
 public class more extends AppCompatActivity {
 

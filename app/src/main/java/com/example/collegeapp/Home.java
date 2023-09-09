@@ -9,6 +9,13 @@ import android.view.ViewGroup;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.example.collegeapp.ui.Attendance_Activity;
+import com.example.collegeapp.ui.BSc_IT_CS;
+import com.example.collegeapp.ui.ChatBot_Activity;
+import com.example.collegeapp.ui.Daily_Task_Activity;
+import com.example.collegeapp.ui.Notice_Activity;
+import com.example.collegeapp.ui.Practical_Course;
+
 import java.util.Objects;
 
 public class Home extends Fragment {

@@ -1,10 +1,12 @@
-package com.example.collegeapp;
+package com.example.collegeapp.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import com.example.collegeapp.R;
 
 import java.util.Objects;
 

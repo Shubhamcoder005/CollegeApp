@@ -1,8 +1,7 @@
-package com.example.collegeapp;
+package com.example.collegeapp.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +13,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.collegeapp.fragments.Fragment_Download;
+import com.example.collegeapp.fragments.Fragment_Notification;
+import com.example.collegeapp.Home;
+import com.example.collegeapp.Quiz_game;
+import com.example.collegeapp.R;
+import com.example.collegeapp.Report_a_Complaint;
+import com.example.collegeapp.Suggestion;
+import com.example.collegeapp.Theme;
+import com.example.collegeapp.profile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
