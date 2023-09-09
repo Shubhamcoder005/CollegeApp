@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import java.util.Objects;
+
 public class Subjects_Activity extends AppCompatActivity {
 
     @Override
@@ -11,6 +13,6 @@ public class Subjects_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subjects);
 
-        getSupportActionBar().setTitle("Subjects");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Subjects");
     }
 }
