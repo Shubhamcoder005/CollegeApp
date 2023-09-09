@@ -9,20 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class Quiz_game extends Fragment {
+public class Fragment_Notification extends Fragment {
 
-    public Quiz_game() {
-        // Required empty public constructor
+    public Fragment_Notification() {
+
     }
-
 
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        View view= inflater.inflate(R.layout.fragment_quiz_game, container, false);
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment__notification, container, false);
 
 
         return view;

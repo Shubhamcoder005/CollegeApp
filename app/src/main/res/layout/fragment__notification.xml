@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile">
+    tools:context=".Fragment_Notification">
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="My profile"
+        android:text="Notify Me"
         android:textSize="@dimen/_60sdp"
         android:textStyle="bold"
         android:gravity="center"/>

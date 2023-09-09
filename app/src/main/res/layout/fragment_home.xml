@@ -16,13 +16,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_5sdp">
 
                 <LinearLayout
                     android:layout_width="@dimen/_275sdp"
                     android:layout_height="@dimen/_120sdp"
                     android:background="@drawable/rediusbox"
-                    android:layout_margin="10dp">
+                    android:layout_marginTop="10dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -52,15 +53,15 @@
 
                         <TextView
                             android:id="@+id/text2"
-                            android:layout_width="@dimen/_95sdp"
+                            android:layout_width="@dimen/_100sdp"
                             android:layout_height="@dimen/_40sdp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
-                            android:layout_marginEnd="38dp"
-                            android:layout_marginBottom="34dp"
+                            android:layout_marginEnd="42dp"
+                            android:layout_marginBottom="35dp"
                             android:text="@string/text2"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_15sdp"
+                            android:textSize="@dimen/_14sdp"
                             android:textStyle="bold"
                             tools:ignore="TextSizeCheck" />
 
@@ -71,9 +72,9 @@
                 <GridLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/_6sdp"
                     android:columnCount="2"
-                    android:gravity="center_horizontal">
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/_10sdp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/_120sdp"

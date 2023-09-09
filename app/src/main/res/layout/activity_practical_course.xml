@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BSc_IT_CS"
+    tools:context=".Practical_Course"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -16,15 +16,10 @@
         android:elevation="@dimen/_5sdp"
         android:id="@+id/bsc_it">
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/back_img">
-
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/pract_img">
 
                 <ImageView
                     android:layout_width="@dimen/_125sdp"
@@ -59,13 +54,7 @@
                     android:textStyle="bold"
                     tools:ignore="VisualLintOverlap,TextSizeCheck" />
 
-
             </RelativeLayout>
-
-        </LinearLayout>
-
-
-
 
     </androidx.cardview.widget.CardView>
 
@@ -77,15 +66,10 @@
         android:id="@+id/bsc_cs"
         android:layout_margin="@dimen/_15sdp">
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/back_img">
-
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/pract_img">
 
                 <ImageView
                     android:layout_width="@dimen/_125sdp"
@@ -120,16 +104,9 @@
                     android:textStyle="bold"
                     tools:ignore="VisualLintOverlap,TextSizeCheck" />
 
-
             </RelativeLayout>
 
-        </LinearLayout>
-
-
-
-
     </androidx.cardview.widget.CardView>
-
 
 
 </LinearLayout>

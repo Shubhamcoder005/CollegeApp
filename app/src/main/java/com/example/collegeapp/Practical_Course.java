@@ -7,13 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class BSc_IT_CS extends AppCompatActivity {
+public class Practical_Course extends AppCompatActivity {
 
     CardView bsc_it,bsc_cs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bsc_it_cs);
+        setContentView(R.layout.activity_practical_course);
 
         bsc_it=findViewById(R.id.bsc_it);
         bsc_cs=findViewById(R.id.bsc_cs);
@@ -23,7 +23,7 @@ public class BSc_IT_CS extends AppCompatActivity {
         bsc_it.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(BSc_IT_CS.this, Semester_Activity.class);
+                Intent intent=new Intent(Practical_Course.this, Practical_Semester.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +31,7 @@ public class BSc_IT_CS extends AppCompatActivity {
         bsc_cs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(BSc_IT_CS.this, Semester_Activity.class);
+                Intent intent=new Intent(Practical_Course.this, Practical_Semester.class);
                 startActivity(intent);
             }
         });
