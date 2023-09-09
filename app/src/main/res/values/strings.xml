@@ -54,6 +54,12 @@
     <string name="reference4">Get All Semester IV Reference</string>
     <string name="reference5">Get All Semester V Reference</string>
     <string name="reference6">Get All Semester VI Reference</string>
+
+    <string name="pract">Get All Practical Reference</string>
+
+    <string name="subject">Subjects</string>
+    <string name="chapter">Chapters</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

@@ -13,10 +13,25 @@
         android:theme="@style/Theme.CollegeApp"
         tools:targetApi="31">
         <activity
+            android:name=".Practical_Subject_Activity"
+            android:exported="false"
+            android:parentActivityName=".Practical_Semester"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".Practical_Semester"
+            android:exported="false"
+            android:parentActivityName=".Practical_Course"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".Practical_Course"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
             android:name=".Subjects_Activity"
             android:exported="false"
             android:parentActivityName=".Semester_Activity"
-            android:theme="@style/action.bar"/>
+            android:theme="@style/action.bar" />
         <activity
             android:name=".Daily_Task_Activity"
             android:exported="false"

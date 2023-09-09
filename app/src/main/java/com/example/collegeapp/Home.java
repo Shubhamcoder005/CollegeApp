@@ -46,7 +46,7 @@ public class Home extends Fragment {
 
         card_practicals.setOnClickListener(v -> {
 
-            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), Practical_Activity.class);
+            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), Practical_Course.class);
             startActivity(intent);
         });
 
