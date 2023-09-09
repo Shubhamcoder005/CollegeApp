@@ -42,22 +42,20 @@
     <string name="bsc_text">This Section Provide The Study Material Related to BSC-IT!</string>
 
     <string name="bsc_text2">This Section Provide The Study Material Related to BSC-CS!</string>
-    <string name="sem1">Semester 1</string>
-    <string name="sem2">Semester 2</string>
-    <string name="sem3">Semester 3</string>
-    <string name="sem4">Semester 4</string>
-    <string name="sem5">Semester 5</string>
-    <string name="sem6">Semester 6</string>
-    <string name="reference1">Get All Semester 1 Reference</string>
-    <string name="reference2">Get All Semester 2 Reference</string>
-    <string name="reference3">Get All Semester 3 Reference</string>
-    <string name="reference4">Get All Semester 4 Reference</string>
-    <string name="reference5">Get All Semester 5 Reference</string>
-    <string name="reference6">Get All Semester 6 Reference</string>
-
-
-
-
+    <string name="sem1">Semester I</string>
+    <string name="sem2">Semester II</string>
+    <string name="sem3">Semester III</string>
+    <string name="sem4">Semester IV</string>
+    <string name="sem5">Semester V</string>
+    <string name="sem6">Semester VI</string>
+    <string name="reference1">Get All Semester I Reference</string>
+    <string name="reference2">Get All Semester II Reference</string>
+    <string name="reference3">Get All Semester III Reference</string>
+    <string name="reference4">Get All Semester IV Reference</string>
+    <string name="reference5">Get All Semester V Reference</string>
+    <string name="reference6">Get All Semester VI Reference</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

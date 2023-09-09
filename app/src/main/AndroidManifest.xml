@@ -13,8 +13,45 @@
         android:theme="@style/Theme.CollegeApp"
         tools:targetApi="31">
         <activity
+            android:name=".Subjects_Activity"
+            android:exported="false"
+            android:parentActivityName=".Semester_Activity"
+            android:theme="@style/action.bar"/>
+        <activity
+            android:name=".Daily_Task_Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".ChatBot_Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".Notice_Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".Practical_Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".Attendance_Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
+        <activity
+            android:name=".Semester_Activity"
+            android:exported="false"
+            android:parentActivityName=".BSc_IT_CS"
+            android:theme="@style/action.bar" />
+        <activity
             android:name=".BSc_IT_CS"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/action.bar" />
         <activity
             android:name=".Report_a_Complaint"
             android:exported="false"

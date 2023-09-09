@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="shubham"
+        android:text="Game"
         android:textStyle="bold"
         android:textSize="@dimen/_60sdp"
         android:gravity="center"/>

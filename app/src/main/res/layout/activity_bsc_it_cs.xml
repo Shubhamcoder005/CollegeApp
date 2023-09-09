@@ -29,30 +29,30 @@
                 <ImageView
                     android:layout_width="@dimen/_125sdp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="@dimen/_11sdp"
                     android:contentDescription="@string/todo"
                     android:src="@drawable/it" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="76dp"
-                    android:layout_marginBottom="95dp"
+                    android:layout_marginEnd="@dimen/_66sdp"
+                    android:layout_marginBottom="@dimen/_63sdp"
                     android:text="@string/BSc_it"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_25sdp"
+                    android:textSize="@dimen/_22sdp"
                     android:textStyle="bold"
                     tools:ignore="VisualLintOverlap,TextSizeCheck" />
 
                 <TextView
                     android:layout_width="@dimen/_105sdp"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="37dp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_22sdp"
                     android:text="@string/bsc_text"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_11sdp"
@@ -90,20 +90,20 @@
                 <ImageView
                     android:layout_width="@dimen/_125sdp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="@dimen/_11sdp"
                     android:contentDescription="@string/todo"
                     android:src="@drawable/cs" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="64dp"
-                    android:layout_marginBottom="95dp"
+                    android:layout_marginEnd="@dimen/_58sdp"
+                    android:layout_marginBottom="@dimen/_70sdp"
                     android:text="@string/BSc_cs"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_25sdp"
+                    android:textSize="@dimen/_22sdp"
                     android:textStyle="bold"
                     tools:ignore="VisualLintOverlap,TextSizeCheck" />
 
@@ -112,8 +112,8 @@
                     android:layout_height="60dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="37dp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
                     android:text="@string/bsc_text2"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_11sdp"

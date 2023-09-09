@@ -109,14 +109,17 @@ public class MainActivity extends AppCompatActivity {
             if (id==R.id.home){
 
                   loadbuttonfragment(new Home(),false);
+                  getSupportActionBar().setTitle("Collage App");
 
             } else if (id==R.id.download) {
 
-               loadbuttonfragment(new profile(),false);
+               loadbuttonfragment(new Fragment_Download(),false);
+                getSupportActionBar().setTitle("Download");
 
             } else if (id==R.id.notification) {
 
-                loadbuttonfragment(new Quiz_game(),false);
+                loadbuttonfragment(new Fragment_Notification(),false);
+                getSupportActionBar().setTitle("Notification");
 
             } else if (id==R.id.game) {
 
@@ -134,16 +137,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         bottomNavigationView.setSelectedItemId(R.id.home);
-
-//        card_ebooks.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent next = new Intent(MainActivity.this, BSc_IT_CS.class);
-//                startActivity(next);
-//            }
-//        });
-
-
 
     }
 
