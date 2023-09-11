@@ -8,27 +8,18 @@
     tools:context=".ui.Subjects_Activity"
     android:orientation="vertical">
 
-    <LinearLayout
+<!--    <TextView-->
+<!--        android:id="@+id/subject"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="@dimen/_10sdp"-->
+<!--        android:text="@string/subject"-->
+<!--        android:textSize="@dimen/_20sdp" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <TextView
-            android:id="@+id/Subject"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="@string/subject"
-            android:textSize="@dimen/_20sdp" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/Subject_item"
-        android:orientation="vertical">
-
-    </LinearLayout>
-
-
+        android:id="@+id/subjectRV"
+        android:layout_margin="@dimen/_2sdp"/>
 </LinearLayout>

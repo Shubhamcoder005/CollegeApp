@@ -29,42 +29,42 @@ public class Practical_Semester extends AppCompatActivity {
 
         Practical_sem1.setOnClickListener(v -> {
 
-            Intent next=new Intent(Practical_Semester.this, Practical_Subject_Activity.class);
+            Intent next=new Intent(Practical_Semester.this, PracticalSubjectActivity.class);
             startActivity(next);
 
         });
 
         Practical_sem2.setOnClickListener(v -> {
 
-            Intent next=new Intent(Practical_Semester.this, Practical_Subject_Activity.class);
+            Intent next=new Intent(Practical_Semester.this, PracticalSubjectActivity.class);
             startActivity(next);
 
         });
 
         Practical_sem3.setOnClickListener(v -> {
 
-            Intent next=new Intent(Practical_Semester.this, Practical_Subject_Activity.class);
+            Intent next=new Intent(Practical_Semester.this, PracticalSubjectActivity.class);
             startActivity(next);
 
         });
 
         Practical_sem4.setOnClickListener(v -> {
 
-            Intent next=new Intent(Practical_Semester.this, Practical_Subject_Activity.class);
+            Intent next=new Intent(Practical_Semester.this, PracticalSubjectActivity.class);
             startActivity(next);
 
         });
 
         Practical_sem5.setOnClickListener(v -> {
 
-            Intent next=new Intent(Practical_Semester.this, Practical_Subject_Activity.class);
+            Intent next=new Intent(Practical_Semester.this, PracticalSubjectActivity.class);
             startActivity(next);
 
         });
 
         Practical_sem6.setOnClickListener(v -> {
 
-            Intent next=new Intent(Practical_Semester.this, Practical_Subject_Activity.class);
+            Intent next=new Intent(Practical_Semester.this, PracticalSubjectActivity.class);
             startActivity(next);
 
         });

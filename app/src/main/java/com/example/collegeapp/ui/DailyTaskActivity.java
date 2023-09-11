@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.collegeapp.R;
 
-public class Daily_Task_Activity extends AppCompatActivity {
+public class DailyTaskActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

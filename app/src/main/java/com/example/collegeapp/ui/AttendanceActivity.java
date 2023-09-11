@@ -6,13 +6,13 @@ import android.os.Bundle;
 
 import com.example.collegeapp.R;
 
-public class ChatBot_Activity extends AppCompatActivity {
+public class AttendanceActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_bot);
+        setContentView(R.layout.activity_attendance);
 
-        getSupportActionBar().setTitle("Chat Bot");
+        getSupportActionBar().setTitle("Attendance System");
     }
 }

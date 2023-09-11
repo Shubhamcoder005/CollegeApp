@@ -9,12 +9,12 @@ import android.view.ViewGroup;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.collegeapp.ui.Attendance_Activity;
+import com.example.collegeapp.ui.AttendanceActivity;
 import com.example.collegeapp.ui.BSc_IT_CS;
-import com.example.collegeapp.ui.ChatBot_Activity;
-import com.example.collegeapp.ui.Daily_Task_Activity;
-import com.example.collegeapp.ui.Notice_Activity;
-import com.example.collegeapp.ui.Practical_Course;
+import com.example.collegeapp.ui.ChatBotActivity;
+import com.example.collegeapp.ui.DailyTaskActivity;
+import com.example.collegeapp.ui.NoticeActivity;
+import com.example.collegeapp.ui.PracticalCourse;
 
 import java.util.Objects;
 
@@ -47,31 +47,31 @@ public class Home extends Fragment {
 
         card_attendance.setOnClickListener(v -> {
 
-            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), Attendance_Activity.class);
+            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), AttendanceActivity.class);
             startActivity(intent);
         });
 
         card_practicals.setOnClickListener(v -> {
 
-            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), Practical_Course.class);
+            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), PracticalCourse.class);
             startActivity(intent);
         });
 
         card_notes.setOnClickListener(v -> {
 
-            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), Notice_Activity.class);
+            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), NoticeActivity.class);
             startActivity(intent);
         });
 
         card_chat_bot.setOnClickListener(v -> {
 
-            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), ChatBot_Activity.class);
+            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), ChatBotActivity.class);
             startActivity(intent);
         });
 
         card_daily_task.setOnClickListener(v -> {
 
-            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), Daily_Task_Activity.class);
+            Intent intent=new Intent(Objects.requireNonNull(getActivity()).getApplication(), DailyTaskActivity.class);
             startActivity(intent);
         });
 

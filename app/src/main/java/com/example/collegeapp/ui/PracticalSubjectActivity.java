@@ -8,7 +8,7 @@ import com.example.collegeapp.R;
 
 import java.util.Objects;
 
-public class Practical_Subject_Activity extends AppCompatActivity {
+public class PracticalSubjectActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

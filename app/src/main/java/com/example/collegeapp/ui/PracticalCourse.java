@@ -9,7 +9,7 @@ import android.view.View;
 
 import com.example.collegeapp.R;
 
-public class Practical_Course extends AppCompatActivity {
+public class PracticalCourse extends AppCompatActivity {
 
     CardView bsc_it,bsc_cs;
     @Override
@@ -25,7 +25,7 @@ public class Practical_Course extends AppCompatActivity {
         bsc_it.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Practical_Course.this, Practical_Semester.class);
+                Intent intent=new Intent(PracticalCourse.this, Practical_Semester.class);
                 startActivity(intent);
             }
         });
@@ -33,7 +33,7 @@ public class Practical_Course extends AppCompatActivity {
         bsc_cs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Practical_Course.this, Practical_Semester.class);
+                Intent intent=new Intent(PracticalCourse.this, Practical_Semester.class);
                 startActivity(intent);
             }
         });

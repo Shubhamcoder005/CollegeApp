@@ -6,13 +6,13 @@ import android.os.Bundle;
 
 import com.example.collegeapp.R;
 
-public class Attendance_Activity extends AppCompatActivity {
+public class NoticeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_attendance);
+        setContentView(R.layout.activity_notice);
 
-        getSupportActionBar().setTitle("Attendance System");
+        getSupportActionBar().setTitle("Notice");
     }
 }
