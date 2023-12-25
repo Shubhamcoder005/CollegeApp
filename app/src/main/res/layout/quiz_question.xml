@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/quizQuestionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/questions"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_17sdp" />
+
+    <LinearLayout
+        android:id="@+id/option1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/edittext_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quizOption1Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/option_1"
+            android:textSize="@dimen/_17sdp" />
+
+        <ImageView
+            android:id="@+id/option1Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:visibility="invisible"
+            android:src="@drawable/correct_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/edittext_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quizOption2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/option_2"
+            android:textSize="@dimen/_17sdp" />
+
+        <ImageView
+            android:id="@+id/option2Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:visibility="invisible"
+            android:src="@drawable/correct_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/edittext_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quizOption3Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/option_3"
+            android:textSize="@dimen/_17sdp" />
+
+        <ImageView
+            android:id="@+id/option3Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:visibility="invisible"
+            android:src="@drawable/correct_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/edittext_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quizOption4Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/option_4"
+            android:textSize="@dimen/_17sdp" />
+
+        <ImageView
+            android:id="@+id/option4Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:visibility="invisible"
+            android:src="@drawable/correct_icon" />
+    </LinearLayout>
+</LinearLayout>

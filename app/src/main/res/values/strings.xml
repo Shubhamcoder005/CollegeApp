@@ -34,7 +34,7 @@
     <string name="profile">Profile</string>
     <string name="Notification">Notification</string>
     <string name="download">Download</string>
-    <string name="game">Quiz Game</string>
+    <string name="quiz_game">Quiz Game</string>
 
 
     <string name="BSc_it">BSc IT</string>
@@ -68,6 +68,25 @@
     <string name="create_new_account">Create New Account</string>
     <string name="or_sign_in_with">or sign in with</string>
     <string name="pract">Practical</string>
+    <string name="java">Java</string>
+    <string name="python">Python</string>
+    <string name="c_cpp">C/C++</string>
+    <string name="math">Math</string>
+    <string name="questions">Questions</string>
+    <string name="time">Time</string>
+    <string name="start">Start</string>
+    <string name="option_1">Option 1</string>
+    <string name="option_2">Option 2</string>
+    <string name="option_3">Option 3</string>
+    <string name="option_4">Option 4</string>
+    <string name="submit">Submit</string>
+    <string name="_0_00">0:00</string>
+    <string name="previous_question_button">Previous Question Button</string>
+    <string name="next_question_button">Next Question Button</string>
+    <string name="score">Score</string>
+    <string name="time_taken">Time taken</string>
+    <string name="total_questions">Total Questions</string>
+    <string name="exit">Exit</string>
 
 
 </resources>

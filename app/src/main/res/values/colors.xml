@@ -8,5 +8,7 @@
     <color name="home_page_text">#E48A3B</color>
     <color name="hint_color">#B3AFAB</color>
     <color name="red">#FF0000</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="green">#2FFF00</color>
 
 </resources>
