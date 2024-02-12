@@ -12,5 +12,6 @@ public class Suggestion extends AppCompatActivity {
         setContentView(R.layout.activity_suggestion);
 
         getSupportActionBar().setTitle("Suggestion");
+
     }
 }

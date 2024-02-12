@@ -12,5 +12,7 @@ public class Help_Center extends AppCompatActivity {
         setContentView(R.layout.activity_help_center);
 
         getSupportActionBar().setTitle("Help Center");
+
+
     }
 }

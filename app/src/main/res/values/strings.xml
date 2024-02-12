@@ -9,9 +9,11 @@
     <string name="attendance">Attendance</string>
     <string name="task">Daily Task</string>
 
+
     <string name="open">Open Navigation Drawer</string>
     <string name="close">Close Navigation Drawer</string>
 
+<!--    modules-->
     <string name="explore">EXPLORE</string>
     <string name="themes">Themes</string>
     <string name="about_faculty">About Faculty</string>
@@ -30,6 +32,7 @@
     <string name="about">About</string>
     <string name="logout">Logout</string>
 
+<!--    user interface-->
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="Notification">Notification</string>
@@ -37,10 +40,10 @@
     <string name="game">Quiz Game</string>
 
 
+<!--    e-book data-->
     <string name="BSc_it">BSc IT</string>
     <string name="BSc_cs">BSc CS</string>
     <string name="bsc_text">This Section Provide The Study Material Related to BSC-IT!</string>
-
     <string name="bsc_text2">This Section Provide The Study Material Related to BSC-CS!</string>
     <string name="sem1">Semester I</string>
     <string name="sem2">Semester II</string>
@@ -55,15 +58,173 @@
     <string name="reference5">Get All Semester V Reference</string>
     <string name="reference6">Get All Semester VI Reference</string>
 
+<!--    practical data-->
     <string name="pract">Get All Practical Reference</string>
 
     <string name="subject">Subjects</string>
+    <string name="subject1">Subject</string>
     <string name="chapter">Chapters</string>
 
     <string name="paper">Papers</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="about_app_name">Collage</string>
+    <string name="about_app_name1">Administration</string>
+    <string name="copyright">\u00A9 Copyright 2023 Collage Administration</string>
+    <string name="report_text">We are here to help you!</string>
+    <string name="complaint">Type your complaint here</string>
+    <string name="send">Send</string>
+    <string name="attachment">Attachment</string>
+    <string name="normal_text_report">We will get back to you within 24 hours. Thank you for your patience</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+<!--    privacy policy data-->
+    <string name="Privacy_Policy">Privacy Policy</string>
+    <string name="Safety_tips_text">Welcome to [Your College Administration Application]! This privacy policy outlines how we collect, use, and protect the personal information you provide through our mobile application.
+        Your privacy is important to us, and we are committed to safeguarding your information.</string>
+    <string name="information">1.Information We Collect </string>
+    <string name="information_text">While using our Services, we may ask you to provide us with certain personal
+        data or personal information thatcan be used to identify you (“Personal Data”, or “data” or “information” or “Personal Information”).
+        We may also collect Personal Data automatically, or from third-party partners or services.  </string>
+    <string name="data">The Personal Data we collect includes: </string>
+    <string name="stu_info">\u25CF Student Information: </string>
+    <string name="stu_info_text">&#160;&#160;&#160;&#160;&#160;&#160; We may collect information provided by students, including but not limited to names, contact details, student IDs, academic records,
+        and other relevant information required for administrative purposes. </string>
+    <string name="Faculty_and_Staff">\u25CFFaculty and Staff Information: </string>
+    <string name="Faculty_and_Staff_text">&#160;&#160;&#160;&#160;&#160;&#160; We may collect information from faculty and staff members, such as names, contact details, professional credentials,
+        and other details necessary for the functioning of the college administration. </string>
+    <string name="Log_Data">\u25CF Log Data: </string>
+    <string name="Log_Data_text">&#160;&#160;&#160;&#160;&#160;&#160; Our application may automatically collect information, including IP addresses, device information,
+        and usage statistics for the purpose of improving our services. </string>
+    <string name="Device_Information">\u25CF Device Information: </string>
+    <string name="Device_Information_text">&#160;&#160;&#160;&#160;&#160;&#160; When you download and use our Services, we automatically collect information on the type of device you use, operating system, resolution, application version, mobile device identifiers
+        (such as your device ID or advertising ID), language, time zone and IP address. </string>
+    <string name="Usage_Information">\u25CF Usage Information:</string>
+    <string name="Usage_Information_text">&#160;&#160;&#160;&#160;&#160;&#160; We collect information automatically about your activity through our Services (Usage Information), such as the date and time you used a service, features
+        you have used,and data generated when you use our Services.</string>
+    <string name="Location">\u25CF Location:</string>
+    <string name="Location_text">&#160;&#160;&#160;&#160;&#160;&#160; When you download and use our Services, we automatically detect your general location, namely country and state through your IP address.
+        We may collect, with your consent if applicable, other location information through your IP address, such as the city you are in.</string>
+    <string name="Media">\u25CF Media and other files:</string>
+    <string name="Media_text">&#160;&#160;&#160;&#160;&#160;&#160; We may ask for access to your camera in case you want to use certain features of our Services.  In case you contact us through our in-app support
+        feature and you need to upload any media or files as attachments, we shall ask for access to such files. </string>
+
+    <string name="Your_Information">2.How We Use Your Information</string>
+    <string name="Your_Information_text">We may use the collected information for the following purposes:</string>
+    <string name="Your_Information_text1">\u25BA Academic Administration: To manage student enrollment, course registration, grading,
+        and other academic administration processes.</string>
+    <string name="Your_Information_text2">\u25BA Communication: To communicate important information, announcements, and updates related to college activities.</string>
+    <string name="Your_Information_text3">\u25BA Faculty and Staff Management: To facilitate human resources processes, including hiring, payroll, and other personnel-related activities.</string>
+    <string name="Your_Information_text4">\u25BA Application Improvement: To analyze usage patterns and improve the functionality and user experience of the application.</string>
+
+    <string name="Data_Security">3.Data Security</string>
+    <string name="Data_Security_text">The security of Your Personal Data is important to Us,We prioritize the security of your information and employ industry-standard measures to protect it from unauthorized access or disclosure, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure.
+        While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</string>
+    <string name="Third_Party">4.Third-Party Services</string>
+    <string name="Third_Party_text">We may utilize third-party services for analytics, authentication, and other purposes.
+        These services may have their own privacy policies, and we encourage users to review them.</string>
+    <string name="RETENTION">5.RETENTION OF PERSONAL DATA</string>
+    <string name="RETENTION_text">We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are
+        required to retain your data to comply with applicable laws), resolve disputes, provide our Services and enforce our legal agreements and policies.</string>
+    <string name="RETENTION_text1">We will also retain Personal Data and Usage Information for internal analysis purposes and legitimate business interest to the extent necessary to improve the functionality of our Services,
+        for business purposes or when we are legally obligated to retain this data for longer time periods.</string>
+    <string name="RETENTION_text2">Your Personal Data collected through our Services will be retained for as long as permitted by applicable law or necessary depending on the respective purpose of collection and shall be deleted when they no longer serve one of the above-mentioned purposes or shall be anonymized and therefore will no longer constitute Personal Data. It is clarified that in no case the retention period should exceed the 5 years from the date of collection. Once we have deleted or anonymized your Personal Data, you will not be able
+        to exercise the right to access, the right to erasure, the right to rectification or the right to data portability.</string>
+
+    <string name="Third_Party_Services">6.Third-Party Services</string>
+    <string name="Third_Party_Services_text">We may utilize third-party services for analytics, authentication, and other purposes.
+        These services may have their own privacy policies, and we encourage users to review them.</string>
+    <string name="Rights">7. Students Rights</string>
+    <string name="Rights_text">Students have the right to access, correct, or request the deletion of their personal information. Requests can be made through [contact details].</string>
+    <string name="PRIVACY_POLICY">8.CHANGES TO THIS PRIVACY POLICY</string>
+    <string name="PRIVACY_POLICY_text">This Privacy Policy may change from time to time, and we encourage you to review it periodically. Your continued use of our Services signifies your acceptance of changes to this Privacy Policy.
+</string>
+    <string name="PRIVACY_POLICY_text2">In some cases, we may notify you of changes to this Privacy Policy with a prominent notice on our Services (for example by way of notification or pop-up), before the changes become effective and update the "effective date" at the top of this Privacy Policy.
+</string>
+    <string name="Contact_Us">9.Contact Us</string>
+    <string name="Contact_Us_text">If you have any questions about this Privacy Policy, You can contact us:</string>
+    <string name="Contact_Us_text1">&#160;&#160;&#160;&#160;&#160;&#160;By email: yashmhatre6700@gmail.com</string>
+    <string name="Contact_Us_text2">&#160;&#160;&#160;&#160;&#160;&#160;By phone number: +91 88620 88536</string>
+
+<!--    safety tips data-->
+    <string name="Safety_Tips">Safety Tips</string>
+    <string name="Safety_Tips_text">Securing a college administration application is crucial to protect sensitive data and ensure the
+        smooth functioning of the system. Here are some safety tips :</string>
+    <string name="strong_Passwords">1.Use Strong Passwords:</string>
+    <string name="strong_Passwords_text">Create passwords with a mix of uppercase and lowercase letters, numbers, and special characters to enhance security.</string>
+    <string name="Secure_Login">2.Secure Login Practices:</string>
+    <string name="Secure_Login_text">Always log out of the application, especially on shared computers, and avoid saving passwords in browsers to prevent unauthorized access.</string>
+    <string name="Update_Contact">3.Update Contact Information:</string>
+    <string name="Update_Contact_text">Keep contact details updated to receive important notifications and alerts from the college administration.</string>
+    <string name="Beware">4.Beware of Phishing Attempts:</string>
+    <string name="Beware_text">Be cautious about unexpected emails or messages requesting sensitive information and verify the legitimacy of communication.</string>
+    <string name="Regularly">5.Regularly Review Account Activity:</string>
+    <string name="Regularly_text">Periodically review account activity to identify and report any suspicious or unauthorized access promptly.</string>
+    <string name="Data_Privacy">6.Data Privacy Awareness:</string>
+    <string name="Data_Privacy_text">Protect personal information and use privacy settings effectively to control who can access certain details.</string>
+    <string name="Safe_Document">7.Safe Document Handling:</string>
+    <string name="Safe_Document_text">Exercise caution when uploading or sharing academic records, transcripts, or other sensitive documents to maintain data integrity.</string>
+    <string name="Public_Wi_Fi">8.Be Wary of Public Wi-Fi:</string>
+    <string name="Public_Wi_Fi_text">Avoid accessing the application on public Wi-Fi networks, and consider using a VPN for added security when connecting remotely.</string>
+    <string name="Software_and_Devices">9.Keep Software and Devices Updated:</string>
+    <string name="Software_and_Devices_text">Ensure that devices and software are regularly updated to benefit from security patches and improvements.</string>
+    <string name="Activity">10.Report Suspicious Activity:</string>
+    <string name="Activity_text">Report any suspicious or unusual activity immediately to the college administration or IT support team.</string>
+    <string name="security_Training">11.Security Training:</string>
+    <string name="security_Training_text">Stay informed about security best practices through training sessions or resources provided by the institution.</string>
+    <string name="Responsible_Sharing">12.Encourage Responsible Sharing:</string>
+    <string name="Responsible_Sharing_text">Share access credentials only with authorized individuals and avoid posting login information publicly.</string>
+    <string name="Stay_Informed">13.Stay Informed:</string>
+    <string name="Stay_Informed_text">Keep abreast of security updates, policy changes, and announcements related to the college administration application to stay informed.</string>
+    <string name="safety_tips">By following these safety tips, users can contribute to a secure and trustworthy college administration environment, safeguarding their
+        personal information and maintaining the integrity of the application.</string>
+
+
+<!--    Terms_and_condition-->
+    <string name="Terms_and_condition">By accessing and using this Application, you agree to comply with and be bound by the following terms and conditions.
+        If you do not agree to these terms, please do not use the application.</string>
+    <string name="Acceptance_of_Terms">1.Acceptance of Terms:</string>
+    <string name="Acceptance_of_Terms_text">By using the application, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions.:</string>
+    <string name="User_Accounts">2.User Accounts:</string>
+    <string name="User_Accounts_text">Users are responsible for maintaining the confidentiality of their account credentials.
+        Users must promptly notify the administration of any unauthorized use or security breaches.</string>
+    <string name="Authorized_Use">3.Authorized Use:</string>
+    <string name="Authorized_Use_text">The application is intended for use by authorized users, including students, faculty, and administrators.
+        Unauthorized access or use is strictly prohibited.</string>
+    <string name="Data_Privacy_condition">4.Data Privacy:</string>
+    <string name="Data_Privacy_condition_text">BNN college adheres to applicable data protection laws. User data will be handled in accordance
+        with the privacy policy, which can be found privacy policy.</string>
+    <string name="Intellectual_Property">5.Intellectual Property:</string>
+    <string name="Intellectual_Property_text">All content and materials within the application, including but not limited to text,
+        graphics, logos, and software, are the property of BNN college and are protected by intellectual property laws.</string>
+    <string name="Prohibited_Activities">6.Prohibited Activities:</string>
+    <string name="Prohibited_Activities_text">Users must not engage in activities that violate applicable laws, regulations, or the rights of others.
+        Prohibited activities include, but are not limited to, hacking, data breaches, and unauthorized access.</string>
+    <string name="Security_Measures">7.Security Measures:</string>
+    <string name="Security_Measures_text">Users are required to follow security guidelines provided by the administration.
+        Any attempts to compromise the security of the application will result in immediate account suspension.</string>
+    <string name="Termination_of_Access">8.Termination of Access:</string>
+    <string name="Termination_of_Access_text">BNN college reserves the right to terminate or suspend user access to the application at any time,
+        without notice, for violation of these terms or any applicable policies.</string>
+    <string name="Modifications_to_Terms">9.Modifications to Terms:</string>
+    <string name="Modifications_to_Terms_text">BNN college reserves the right to modify these terms and conditions at any time.
+        Users will be notified of significant changes.</string>
+    <string name="Disclaimer_of_Warranties">10.Disclaimer of Warranties:</string>
+    <string name="Disclaimer_of_Warranties_text">The application is provided "as is" without any warranties, expressed or implied. BNN college does not guarantee the accuracy,
+        completeness, or reliability of the application.</string>
+    <string name="Limitation_of_Liability">11.Limitation of Liability:</string>
+    <string name="Limitation_of_Liability_text"> BNN College shall not be liable for any direct, indirect, incidental, special,
+        or consequential damages arising out of the use or inability to use the application.</string>
+    <string name="Governing_Law">12.Governing Law:</string>
+    <string name="Governing_Law_text">These terms and conditions shall be governed by and construed
+        in accordance with the laws of Jurisdiction.</string>
+    <string name="Contact_Information">13.Contact Information:</string>
+    <string name="Contact_Information_text">For questions or concerns regarding these terms and conditions, please contact us at <b><i>Phone: +91 88620 88536</i></b> or <b><i>email: yashmhatre6700@gmail.com</i></b></string>
+
+    <string name="Help_center_text">Hi Prathmesh,What Can We Help You With?</string>
+
+
+    <string name="query">Type your query here</string>
 
 
 </resources>

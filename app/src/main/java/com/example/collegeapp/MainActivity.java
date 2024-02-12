@@ -25,9 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
 
-    CardView card_ebooks,card_chat_bot,card_practicals,card_notes,card_attendance,card_daily_task;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +40,7 @@ public class MainActivity extends AppCompatActivity {
         menuNavigation=findViewById(R.id.menuNavigation);
         toolbar=findViewById(R.id.toolbar);
 
-        card_ebooks=findViewById(R.id.card_ebooks);
-        card_chat_bot=findViewById(R.id.card_chat_bot);
-        card_practicals=findViewById(R.id.card_practicals);
-        card_notes=findViewById(R.id.card_notes);
-        card_attendance=findViewById(R.id.card_attendance);
-        card_daily_task=findViewById(R.id.card_daily_task);
+
 
         setSupportActionBar(toolbar);
 
@@ -99,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
-
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
