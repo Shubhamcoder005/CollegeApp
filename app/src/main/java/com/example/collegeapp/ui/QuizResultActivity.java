@@ -27,14 +27,32 @@ public class QuizResultActivity extends AppCompatActivity {
         quizWrongAnswer = findViewById(R.id.quizWrongAnswer);
         quizExitBtn = findViewById(R.id.quizExitBtn);
 
+        SharedPreferences sharedPreferences = getSharedPreferences("CollageApp",0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
         quizScore.setText(getIntent().getIntExtra("correctAnswers",0)+"");
         quizTimeTaken.setText(getIntent().getStringExtra("quizTimeTaken"));
         quizTotalQues.setText("5");
         quizCorrectAnswer.setText(getIntent().getIntExtra("correctAnswers",0)+"\nCorrect");
         quizWrongAnswer.setText(getIntent().getIntExtra("wrongAnswers",0)+"\nWrong");
+        //set quiz time taken is 0
+        editor.putString("quizTime","");
+        editor.apply();
         quizExitBtn.setOnClickListener(v ->{
             finish();
             startActivity(new Intent(this, MainActivity.class));
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        finish();
     }
 }

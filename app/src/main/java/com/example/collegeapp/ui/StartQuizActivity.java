@@ -38,4 +38,15 @@ public class StartQuizActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        finish();
+    }
 }
